@@ -1,0 +1,26 @@
+.desktopMenuCon{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desktopMenuCon a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #A01114;
+}
+
+.profileCon{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileCon div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.authNav{
+    display: flex;
+    gap: 2rem;
+}
