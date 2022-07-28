@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-@media (min-widt: 767px) {
+@media (min-width: 767px) {
     .wrapperCon{
         width: 90%;
         max-width: 1920px;

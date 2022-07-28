@@ -15,4 +15,15 @@
 }
 
 .deskMenu{
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .deskMenu{
+        display: block;
+    }
+
+    .mobMenu{
+        display: none;
+    }
 }

@@ -2,6 +2,7 @@
 import logo from "../../../Assets/RetCake.png";
 import Wrapper from "../../TinyComp/Wrapper";
 import DesktopMenu from "../DesktopMenu/DesktopMenu";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import classes from "./HeaderNav.module.css"
 
 const HeaderNav = () => {
@@ -20,6 +21,10 @@ const HeaderNav = () => {
                     <div className={classes.deskMenu} >
                         <DesktopMenu />
 
+                    </div>
+
+                    <div className={ classes.mobMenu }>
+                        <MobileMenu/>
                     </div>
                 </div>
 

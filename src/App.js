@@ -1,10 +1,10 @@
-import HeaderNav from './Components/Header/HeaderNav/HeaderNav';
+import Home from './Components/Directory/Home/Home';
 import { ContextProvider } from './Context/AuthContext';
 
 function App() {
   return (
     <ContextProvider>
-      <HeaderNav/>
+      <Home/>
     </ContextProvider>
     
   );
