@@ -1,11 +1,14 @@
 import HeaderNav from "../../Header/HeaderNav/HeaderNav";
+import AboutSection from "./HomeSections/AboutSection/AboutSection";
+import CatalogSection from "./HomeSections/CatalogSection/Catalog";
 import Hero from "./HomeSections/Hero/Hero";
 
 const Home = () => {
     return (
         <div>
-            <HeaderNav />
             <Hero/>
+            <AboutSection/>
+            <CatalogSection/>
         </div>
 
     );

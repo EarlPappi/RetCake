@@ -1,0 +1,45 @@
+.aboutSecCon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 767px) {
+    .aboutSecCon{
+        flex-direction: row;
+    }
+
+    .aboutImgcon{
+        width: 40vw;
+    }
+
+    .aboutText{
+        width: 60vw;
+    }
+}
+
+
+.aboutSecCon h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 767px) {
+    .aboutSecCon h1{
+        font-size: 3rem;
+    }
+}
+
+.aboutSecCon p{
+    font-size: .8rem;
+    color: #A01114;
+    text-align: center;
+}
+
+@media (min-width: 767px) {
+    .aboutSecCon p{
+        font-size: 1rem;
+    }
+}
+

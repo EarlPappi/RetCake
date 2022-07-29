@@ -14,7 +14,7 @@ const Hero = () => {
                         <h1>Ret Cake & Delight</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non recusandae libero perferendis, cum veniam quaerat.</p>
 
-                        <div>
+                        <div className={ classes.heroInin }>
                             <span>Birthday</span>
                             <span>Wedding</span>
                             <span>Festival</span>
