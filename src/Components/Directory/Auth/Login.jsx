@@ -1,5 +1,3 @@
-import Btn from "../../TinyComp/Btn/Btn";
-
 
 const Signup = () => {
     return ( 
