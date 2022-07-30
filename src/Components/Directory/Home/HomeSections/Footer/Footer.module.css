@@ -1,0 +1,21 @@
+.footerCon{
+    background-color:  #F7EFE8;
+    padding: 4rem 0rem;
+    margin-top: 2rem;
+}
+
+.footerInner > nav{
+    display: flex;
+    justify-content: center;
+    gap: 2rem
+}
+
+.footerInner > nav > a{
+    text-decoration: none;
+}
+
+.footerInner > div{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
