@@ -19,3 +19,6 @@
     justify-content: center;
     margin-top: 1rem;
 }
+.footerInner p{
+    text-align: center;
+}
