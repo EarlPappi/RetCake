@@ -9,7 +9,7 @@ import festiveCake from "../Assets/festive-dessert-birthday-valentine-dayred-vel
 const UserContext = createContext();
 
 export const ContextProvider = ({ children }) => {
-    const [loggedIn, setIsLoggedIn] = useState(false);
+    const [loggedIn, setIsLoggedIn] = useState(true);
 
     const cakes = [
         {

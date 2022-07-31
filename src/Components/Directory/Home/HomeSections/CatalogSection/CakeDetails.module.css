@@ -1,0 +1,33 @@
+
+.cakeDetCon{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0rem;
+    flex-direction: column;
+}
+
+@media (min-width: 767px)   {
+    .cakeDetCon{
+        flex-direction: row;
+    }
+}
+
+.cakeDetCon > div{
+    flex: 50%;
+}
+
+.cakeDetCon h3{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+@media (min-width: 767px)   {
+    .cakeDetCon h3{
+        font-size: 3rem;
+        text-align: left;
+    }
+}

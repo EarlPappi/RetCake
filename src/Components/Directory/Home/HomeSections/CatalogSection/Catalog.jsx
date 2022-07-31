@@ -1,6 +1,7 @@
 import { useAuth } from "../../../../../Context/AuthContext";
 import Wrapper from "../../../../TinyComp/Wrapper"
 import classes from "./Catalog.module.css";
+import { Link } from "react-router-dom";
 
 const CatalogSection = () => {
     const { cakes } = useAuth();
@@ -29,6 +30,7 @@ const CatalogSection = () => {
                                     <span>${cake.price}</span>
 
                                 </div>
+                                <Link to={ `/cakes/${cake.id}` }>View</Link>
                             </div>
                         )
                     })}
