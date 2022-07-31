@@ -23,7 +23,7 @@ const DesktopMenu = () => {
                         <img src={userIcon} alt="" />
                     </div>
 
-                    <p>earlpappi@gmail.com</p>
+                    <p>Hello, earlpappi@gmail.com</p>
                 </div>
             }
 

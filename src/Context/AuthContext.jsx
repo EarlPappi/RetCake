@@ -5,11 +5,21 @@ import nakedChoco from "../Assets/front-view-delicious-cake-concept 1.png";
 import assortementCake from "../Assets/assortment-pieces-cake 1.png";
 import rolledChoco from "../Assets/chocolate-roll-cake 1.png";
 import festiveCake from "../Assets/festive-dessert-birthday-valentine-dayred-velvet-cake-with-fireworks 1.png";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../Firebase";
 
 const UserContext = createContext();
 
 export const ContextProvider = ({ children }) => {
     const [loggedIn, setIsLoggedIn] = useState(false);
+
+    const signup = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+    const login = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
 
     const cakes = [
         {
@@ -60,7 +70,9 @@ export const ContextProvider = ({ children }) => {
         <UserContext.Provider value={{
             loggedIn,
             setIsLoggedIn,
-            cakes
+            cakes,
+            signup,
+            login
 
         }}>
             {children}

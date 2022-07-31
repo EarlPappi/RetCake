@@ -24,3 +24,13 @@
     display: flex;
     gap: 2rem;
 }
+
+.profileCon p{
+    font-size: .5rem;
+}
+
+@media (min-width: 767px) {
+    .profileCon p{
+        font-size: 1rem;
+    }
+}
