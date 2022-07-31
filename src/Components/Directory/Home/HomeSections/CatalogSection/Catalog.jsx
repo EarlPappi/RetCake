@@ -20,17 +20,26 @@ const CatalogSection = () => {
                 <div className={classes.catalogCakesCon}>
                     {cakes.map((cake) => {
                         return (
-                            <div key={cake.id}>
+                            <div key={cake.id} className={ classes.mapDiv }>
                                 <div>
                                     <img src={cake.img} alt={cake.name} width="100%" />
                                 </div>
 
-                                <div>
+                                <div style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center"
+                                }}>
                                     <h3>{cake.name}</h3>
                                     <span>${cake.price}</span>
 
                                 </div>
-                                <Link to={ `/cakes/${cake.id}` }>View</Link>
+
+                                <div className={ classes.btnCon }>
+                                    <Link to={`/cakes/${cake.id}`}>View</Link>
+                                    <Link to="/">Add to Cart</Link>
+
+                                </div>
                             </div>
                         )
                     })}

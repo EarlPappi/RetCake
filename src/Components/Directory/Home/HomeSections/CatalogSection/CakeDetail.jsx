@@ -10,15 +10,17 @@ const CakeDetail = () => {
     return (
         <div>
             <Wrapper>
-                <div className={ classes.cakeDetCon }>
+                <div className={classes.cakeDetCon}>
                     <div>
-                        <img src={cakes[id - 1].img} alt={cakes[id - 1].name} width="100%"/>
+                        <img src={cakes[id - 1].img} alt={cakes[id - 1].name} width="100%" />
                     </div>
 
                     <div>
                         <h3>{cakes[id - 1].name}</h3>
                         <p>{cakes[id - 1].details}</p>
+                        <button>Add to Cart</button>
                     </div>
+
                 </div>
             </Wrapper>
         </div>

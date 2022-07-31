@@ -31,3 +31,15 @@
         text-align: left;
     }
 }
+
+.cakeDetCon button{
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: .7rem;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

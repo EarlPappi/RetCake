@@ -10,13 +10,9 @@ const DesktopMenu = () => {
 
     return (
         <nav className={classes.desktopMenuCon}>
-            <a href="./">Catalog</a>
-            <a href="./">About Us</a>
-            <a href="./">Contact Us</a>
+
             { !loggedIn && <NavLink to="login">Login</NavLink> }
             { !loggedIn && <NavLink to="signup">Signup</NavLink> }
-
-            
          
 
 
