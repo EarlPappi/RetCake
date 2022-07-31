@@ -1,4 +1,5 @@
 // import { useAuth } from "../../../Context/AuthContext";
+import { Link } from "react-router-dom";
 import logo from "../../../Assets/RetCake.png";
 import Wrapper from "../../TinyComp/Wrapper";
 import DesktopMenu from "../DesktopMenu/DesktopMenu";
@@ -14,7 +15,7 @@ const HeaderNav = () => {
                 <div className={classes.innerHeaderCon}>
 
                     <div  className={ classes.imgHead }>
-                        <img src={logo} alt="RetCake Logo" />
+                        <Link to="/"> <img src={logo} alt="RetCake Logo" /></Link>
                     </div>
 
 

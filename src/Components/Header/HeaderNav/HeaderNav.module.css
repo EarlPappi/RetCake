@@ -1,6 +1,6 @@
 .headerCon{
     background-color: #F7EFE8;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: sticky;
     top: 0;
 }
@@ -13,8 +13,8 @@
     gap: 2rem;
 }
 
-.imgHead{
-}
+/* .imgHead{
+} */
 
 .deskMenu{
     display: none;

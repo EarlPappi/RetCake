@@ -1,4 +1,5 @@
 import classes from "./Auth.module.css";
+import { Link } from "react-router-dom";
 
 
 const Signup = () => {
@@ -12,7 +13,7 @@ const Signup = () => {
                     <input type="password" placeholder="Enter Password" name="" id="" />
                     <input type="password" placeholder="Enter Password Again" name="" id="" />
 
-                    <p>Have an account? Click <a href="/login">here</a> to login</p>
+                    <p>Have an account? Click <Link to="../login">here</Link> to login</p>
 
                     <button>Signup</button>
 
