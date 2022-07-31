@@ -17,6 +17,12 @@
     border-radius: 5px;
 }
 
+@media (min-width: 767px) {
+    .formCon{
+        width: 30vw;
+    }
+}
+
 .formCon h2{
     color: #A01114;
     text-align: center;
@@ -30,11 +36,25 @@
     margin-top: 1rem;
     font-size: .7rem;
 }
+
+@media (min-width: 767px) {
+    .formCon input{
+        font-size: .8rem;
+    }
+}
+
 .formCon p{
     margin-top: 1rem;
     font-size: .6rem;
     text-align: center;
 }
+
+@media (min-width: 767px) {
+    .formCon p{
+        font-size: .8rem;
+    }
+}
+
 .formCon button{
     margin-top: 2em;
     padding: .5rem 1rem;
