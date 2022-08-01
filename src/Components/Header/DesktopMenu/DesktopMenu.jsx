@@ -5,7 +5,7 @@ import { useAuth } from "../../../Context/AuthContext";
 import { NavLink } from "react-router-dom";
 
 const DesktopMenu = () => {
-    const { loggedIn } = useAuth();
+    const { loggedIn, user } = useAuth();
 
 
     return (
@@ -23,7 +23,7 @@ const DesktopMenu = () => {
                         <img src={userIcon} alt="" />
                     </div>
 
-                    <p>Hello, earlpappi@gmail.com</p>
+                    <p>Hello, { user?.email }</p>
                 </div>
             }
 

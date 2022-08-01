@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const MobileMenu = () => {
 
-    const { loggedIn } = useAuth();
+    const { loggedIn, user } = useAuth();
     return ( 
         <nav className={classes.desktopMenuCon}>
 
@@ -22,7 +22,8 @@ const MobileMenu = () => {
                     <img src={userIcon} alt="" />
                 </div>
 
-                <p>Hello, earlpappi@gmail.com</p>
+                <p>Hello, { user?.email }</p>
+                <p>Logout</p>
                 {/* <p>Logout</p> */}
             </div>
         }

@@ -1,16 +1,23 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import vanillaIcing from "../Assets/closeup-shot-delicious-cupcakes-with-cream-cherries-top-vintage-books 1.png";
 import tripleLayer from "../Assets/tony-eight-media--uZNyLofoPw-unsplash 2.png";
 import nakedChoco from "../Assets/front-view-delicious-cake-concept 1.png";
 import assortementCake from "../Assets/assortment-pieces-cake 1.png";
 import rolledChoco from "../Assets/chocolate-roll-cake 1.png";
 import festiveCake from "../Assets/festive-dessert-birthday-valentine-dayred-velvet-cake-with-fireworks 1.png";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    sendPasswordResetEmail,
+    onAuthStateChanged
+} from "firebase/auth";
 import { auth } from "../Firebase";
 
 const UserContext = createContext();
 
 export const ContextProvider = ({ children }) => {
+    const [user, setUser] = useState({})
+
     const [loggedIn, setIsLoggedIn] = useState(false);
 
     const signup = (email, password) => {
@@ -20,6 +27,22 @@ export const ContextProvider = ({ children }) => {
     const login = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
+
+    const resetPassword = (email) => {
+        return sendPasswordResetEmail(auth, email)
+    }
+
+    useEffect(()=>{
+        const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
+            setUser(currentUser);
+            return currentUser
+        });
+
+        return (()=>{
+            unsubscribe();
+        });
+
+    }, []);
 
     const cakes = [
         {
@@ -72,7 +95,9 @@ export const ContextProvider = ({ children }) => {
             setIsLoggedIn,
             cakes,
             signup,
-            login
+            login,
+            resetPassword,
+            user
 
         }}>
             {children}

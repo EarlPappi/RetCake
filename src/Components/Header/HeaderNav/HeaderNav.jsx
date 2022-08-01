@@ -19,10 +19,10 @@ const HeaderNav = () => {
                     </div>
 
 
-                    <div className={classes.deskMenu} >
+                    {/* <div className={classes.deskMenu} >
                         <DesktopMenu />
 
-                    </div>
+                    </div> */}
 
                     <div className={ classes.mobMenu }>
                         <MobileMenu/>

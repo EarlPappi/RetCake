@@ -30,11 +30,12 @@ const Signup = () => {
             setError("Email or Password cannot be empty");
             setIsError(true)
             setIsValid(false);
+            setUserEmail('')
             return;
         }
 
         if(userPassword !== userPasswordConfirm){
-            isLoading(false);
+            setisLoading(false);
             setError("Password do not match");
             setIsError(true)
             setIsValid(false);

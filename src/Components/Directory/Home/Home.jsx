@@ -3,7 +3,8 @@ import CatalogSection from "./HomeSections/CatalogSection/Catalog";
 import Footer from "./HomeSections/Footer/Footer";
 import Hero from "./HomeSections/Hero/Hero";
 
-const Home = () => {
+const Home = () => {   
+ 
     return (
         <div>
             <Hero/>
