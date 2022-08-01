@@ -3,8 +3,10 @@ import Wrapper from "../../../../TinyComp/Wrapper"
 import classes from "./Catalog.module.css";
 import { Link } from "react-router-dom";
 
+
 const CatalogSection = () => {
-    const { cakes } = useAuth();
+
+    const { cakes, addToCart } = useAuth();
     return (
         <div style={{
             padding: "2rem 0"
@@ -37,7 +39,7 @@ const CatalogSection = () => {
 
                                 <div className={ classes.btnCon }>
                                     <Link to={`/cakes/${cake.id}`}>View</Link>
-                                    <Link to="/">Add to Cart</Link>
+                                    <Link to="/" onClick={addToCart}>Add to Cart</Link>
 
                                 </div>
                             </div>

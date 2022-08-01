@@ -4,7 +4,7 @@ import Wrapper from "../../../../TinyComp/Wrapper";
 import classes from "./CakeDetails.module.css";
 
 const CakeDetail = () => {
-    const { cakes } = useAuth();
+    const { cakes, addToCart } = useAuth();
     const { id } = useParams();
 
     return (
@@ -18,7 +18,7 @@ const CakeDetail = () => {
                     <div>
                         <h3>{cakes[id - 1].name}</h3>
                         <p>{cakes[id - 1].details}</p>
-                        <button>Add to Cart</button>
+                        <button onClick={addToCart}>Add to Cart</button>
                     </div>
 
                 </div>

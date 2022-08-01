@@ -9,7 +9,8 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     sendPasswordResetEmail,
-    onAuthStateChanged
+    onAuthStateChanged,
+    signOut
 } from "firebase/auth";
 import { auth } from "../Firebase";
 
@@ -30,6 +31,10 @@ export const ContextProvider = ({ children }) => {
 
     const resetPassword = (email) => {
         return sendPasswordResetEmail(auth, email)
+    }
+
+    const logout = () =>{
+        return signOut(auth);
     }
 
     useEffect(()=>{
@@ -87,7 +92,16 @@ export const ContextProvider = ({ children }) => {
             img: festiveCake,
             details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero maxime consequatur ut quae. Repellendus nulla veritatis suscipit magnam, ut sed tenetur magni. Minima ipsam dolore dolorem. Officiis, modi iure molestiae commodi doloribus placeat, dolore laboriosam reiciendis eligendi ipsa nisi."
         }
-    ]
+    ];
+
+    const [cartItems, setCartItems] = useState([])
+
+    const addToCart = (e) =>{
+        if(!loggedIn){
+            alert("You need to log in to perform this action");
+            return;
+        }
+    }
 
     return (
         <UserContext.Provider value={{
@@ -97,7 +111,11 @@ export const ContextProvider = ({ children }) => {
             signup,
             login,
             resetPassword,
-            user
+            logout,
+            user,
+            addToCart,
+            cartItems, 
+            setCartItems
 
         }}>
             {children}

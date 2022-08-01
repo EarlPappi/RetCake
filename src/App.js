@@ -6,8 +6,10 @@ import Signup from './Components/Directory/Auth/Signup';
 import Login from './Components/Directory/Auth/Login';
 import ForgetPassword from './Components/Directory/Auth/ForgetPassword';
 import CakeDetail from './Components/Directory/Home/HomeSections/CatalogSection/CakeDetail';
+import Basket from './Components/Directory/Cart/Basket';
 
 function App() {
+
   return (
     <ContextProvider>
     <HeaderNav />
@@ -17,6 +19,7 @@ function App() {
           <Route path="login" element={ <Login/> } />
           <Route path="reset-password" element={ <ForgetPassword/> } />
           <Route path="cakes/:id" element={ <CakeDetail/> }/>
+          <Route path="cart" element={ <Basket/> }/>
 
         </Routes>
     </ContextProvider>
