@@ -90,7 +90,7 @@ export const ContextProvider = ({ children }) => {
             name: "Festive/Birthday Cake with Candle",
             price: 90,
             img: festiveCake,
-            details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero maxime consequatur ut quae. Repellendus nulla veritatis suscipit magnam, ut sed tenetur magni. Minima ipsam dolore dolorem. Officiis, modi iure molestiae commodi doloribus placeat, dolore laboriosam reiciendis eligendi ipsa nisi."
+            details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero maxime consequatur ut quae. Repellendus nulla veritatis suscipit magnam, ut sed tenetur magni. Minima ipsam dolore dolorem. Officiis, modi iure molestiae commodi doloribus placeat, dolore laboriosam reiciendis eligendi ipsa ."
         }
     ];
 
