@@ -101,12 +101,6 @@ export const ContextProvider = ({ children }) => {
             alert("You need to log in to perform this action");
             return;
         }
-
-        const exist = cartItems.find(x => x.id === cake.id);
-
-        // if(exist){
-        //     setCartItems(cartItems.map(x => x.id === cake.id ? {...exist, qty: exist.qty+ 1 : x }))
-        // }
     }
 
     return (

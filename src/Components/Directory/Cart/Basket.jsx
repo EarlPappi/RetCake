@@ -4,6 +4,8 @@ import Wrapper from "../../TinyComp/Wrapper";
 const Basket = () => {
 
     const { cartItems } = useAuth()
+
+    
     return (
         <div>
             <Wrapper>
