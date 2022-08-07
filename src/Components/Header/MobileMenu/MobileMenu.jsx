@@ -4,9 +4,10 @@ import { useAuth } from "../../../Context/AuthContext";
 import { Link, NavLink } from "react-router-dom";
 
 const MobileMenu = () => {
+    const { cartCount } = useAuth();
 
     const { loggedIn, user } = useAuth();
-
+    
     
 
     return (
@@ -21,6 +22,7 @@ const MobileMenu = () => {
                 <div className={classes.profileCon}>
                     <div>
                         <Link to="/cart"> <img src={cartIcon} alt="" /></Link> 
+                        <span className={ classes.cartCount }>{ cartCount }</span>
                     </div>
 
                     <p >Hello, {user?.email}</p>

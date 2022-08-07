@@ -94,13 +94,20 @@ export const ContextProvider = ({ children }) => {
         }
     ];
 
+    const [cartCount, setCartCount] = useState(0)
+
     const [cartItems, setCartItems] = useState([])
 
     const addToCart = (cake) =>{
         if(!loggedIn){
+            console.log()
             alert("You need to log in to perform this action");
             return;
         }
+
+        
+        setCartCount(cartCount + 1);
+        return;
     }
 
     return (
@@ -115,7 +122,9 @@ export const ContextProvider = ({ children }) => {
             user,
             addToCart,
             cartItems, 
-            setCartItems
+            setCartItems,
+            cartCount, 
+            setCartCount
 
         }}>
             {children}
